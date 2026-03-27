@@ -3,6 +3,9 @@
 
 const nextConfig = {
   output: 'standalone',
+  experimental: {
+    runtime: 'edge', // 全局使用 Edge Runtime
+  },
   eslint: {
     dirs: ['src'],
   },
