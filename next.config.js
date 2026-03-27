@@ -3,9 +3,7 @@
 
 const nextConfig = {
   output: 'standalone',
-  experimental: {
-    runtime: 'edge', // 全局使用 Edge Runtime
-  },
+
   eslint: {
     dirs: ['src'],
   },
@@ -14,7 +12,9 @@ const nextConfig = {
   swcMinify: false,
 
   experimental: {
+    
     instrumentationHook: process.env.NODE_ENV === 'production',
+    runtime: 'edge'
   },
 
   // Uncoment to add domain whitelist
